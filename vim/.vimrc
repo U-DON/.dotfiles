@@ -7,24 +7,39 @@ endif
 call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
-Plug 'vim-scripts/colorsupport.vim'
 call plug#end()
 
-let g:material_theme_style = 'dark'
-colorscheme material
+" Shorten time to enter escape sequence.
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=500
+    au InsertLeave * set timeoutlen=500
+  augroup END
+endif
 
-let g:netrw_liststyle=3
+colorscheme delek
+filetype plugin indent on
 
 inoremap jk <Esc>
 
+let g:netrw_liststyle=3
+
+set autoindent
 set backupcopy=yes
 set expandtab
+set hlsearch
 set laststatus=2
+set mouse=a
 set noshowmode
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set smarttab
+set splitbelow
+set splitright
+set tabstop=2
+set t_Co=256
 
-filetype plugin indent on
 syntax on
 
 " lightline
