@@ -1,0 +1,7 @@
+[user]
+	email = 1067024+U-DON@users.noreply.github.com
+	name = Eugene Doan
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
