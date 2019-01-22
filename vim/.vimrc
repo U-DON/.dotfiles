@@ -19,15 +19,17 @@ if ! has('gui_running')
   augroup END
 endif
 
+" Quick escape.
+inoremap jk <Esc>
+
 colorscheme delek
 filetype plugin indent on
-
-inoremap jk <Esc>
 
 let g:netrw_liststyle=3
 
 set autoindent
 set backupcopy=yes
+set clipboard=unnamed " Sync register with clipboard.
 set expandtab
 set hlsearch
 set laststatus=2
