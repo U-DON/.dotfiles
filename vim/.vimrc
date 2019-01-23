@@ -24,25 +24,39 @@ inoremap jk <Esc>
 
 colorscheme delek
 filetype plugin indent on
+syntax on
+
+" No background on vertical split bars; thinner splits.
+hi VertSplit NONE
+
+" Default background for wildmenu.
+hi StatusLine ctermbg=NONE guibg=NONE
+
+" Simple grey highlight on text selection.
+hi Visual term=NONE cterm=NONE ctermbg=DarkGrey gui=NONE guifg=NONE guibg=DarkGrey
 
 let g:netrw_liststyle=3
 
 set autoindent
+set backspace=indent,eol,start " Sensible backspace.
 set backupcopy=yes
 set clipboard=unnamed " Sync register with clipboard.
 set expandtab
+set fillchars=vert:\│ " Connected vertical split characters.
 set hlsearch
+set ignorecase
+set incsearch
 set laststatus=2
 set mouse=a
 set noshowmode
 set shiftwidth=2
+set smartcase
 set smarttab
 set splitbelow
 set splitright
 set tabstop=2
 set t_Co=256
-
-syntax on
+set wildmenu
 
 " lightline
 
