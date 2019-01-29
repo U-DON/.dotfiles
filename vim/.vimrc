@@ -29,10 +29,11 @@ syntax on
 " No background on vertical split bars; thinner splits.
 hi VertSplit NONE
 
+hi Search ctermfg=Black
+
 " Default background for wildmenu.
 hi StatusLine ctermbg=NONE guibg=NONE
 
-" Simple grey highlight on text selection.
 hi Visual term=NONE cterm=NONE ctermbg=DarkGrey gui=NONE guifg=NONE guibg=DarkGrey
 
 let g:netrw_liststyle=3
