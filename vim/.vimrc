@@ -5,8 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Shorten time to enter escape sequence.
@@ -36,6 +37,8 @@ hi StatusLine ctermbg=NONE guibg=NONE
 
 hi Visual term=NONE cterm=NONE ctermbg=DarkGrey gui=NONE guifg=NONE guibg=DarkGrey
 
+let g:airline_section_c='%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+let g:airline_theme='simple'
 let g:netrw_liststyle=3
 
 set autoindent
@@ -55,24 +58,7 @@ set smartcase
 set smarttab
 set splitbelow
 set splitright
+set statusline+='%F' " Show full file path.
 set tabstop=2
 set t_Co=256
 set wildmenu
-
-" lightline
-
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode' ], [ 'paste' ],
-      \             [ 'readonly', 'filename' ] ],
-      \ },
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \ },
-      \ }
-
-function! LightlineFilename()
-  let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
-  let modified = &modified ? ' +' : ''
-  return filename . modified
-endfunction
