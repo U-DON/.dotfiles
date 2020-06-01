@@ -25,7 +25,7 @@ stow git
 
 ## Other Installations
 
-# Zsh
+### Zsh
 
 https://github.com/ohmyzsh/ohmyzsh
 
@@ -39,7 +39,7 @@ https://github.com/romkatv/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-# Neovim
+### Neovim
 
 https://github.com/neovim/neovim
 
@@ -47,7 +47,7 @@ https://github.com/neovim/neovim
 sudo apt install neovim
 ```
 
-# Node Version Manager (NVM)
+### Node Version Manager (NVM)
 
 https://github.com/nvm-sh/nvm
 https://github.com/lukechilds/zsh-nvm
@@ -56,7 +56,7 @@ https://github.com/lukechilds/zsh-nvm
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ```
 
-# rbenv
+### rbenv
 
 https://github.com/rbenv/rbenv
 
@@ -75,7 +75,7 @@ rbenv install 2.7.1
 rbenv rehash
 ```
 
-# ripgrep (rg)
+### ripgrep (rg)
 
 https://github.com/BurntSushi/ripgrep
 
@@ -83,7 +83,7 @@ https://github.com/BurntSushi/ripgrep
 sudo apt install ripgrep
 ```
 
-# scm_breeze
+### scm_breeze
 
 https://github.com/scmbreeze/scm_breeze
 
