@@ -41,6 +41,7 @@ set backupcopy=yes
 set clipboard=unnamed " Sync register with clipboard.
 set expandtab
 set fillchars=vert:\│ " Connected vertical split characters.
+set guicursor= " Use default terminal cursor.
 set hlsearch
 set ignorecase
 set mouse=a
