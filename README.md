@@ -47,32 +47,13 @@ https://github.com/neovim/neovim
 sudo apt install neovim
 ```
 
-### Node Version Manager (NVM)
+### asdf
 
-https://github.com/nvm-sh/nvm
-https://github.com/lukechilds/zsh-nvm
-
-```shell
-git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
-```
-
-### rbenv
-
-https://github.com/rbenv/rbenv
-
+https://github.com/asdf-vm/asdf
+https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
 
 ```shell
-# Use rbenv-installer to install.
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-
-# Install ruby-build or you may encounter errors installing a Ruby version.
-sudo apt install ruby-build
-
-# Install Ruby in order to get full functionality out of scm_breeze,
-# such as `ls` wrappers  with number aliases.
-rbenv install -l
-rbenv install 2.7.1
-rbenv rehash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
 ### ripgrep (rg)
