@@ -1,6 +1,8 @@
 [user]
 	email = 1067024+U-DON@users.noreply.github.com
 	name = Eugene Doan
+[pull]
+  rebase = true
 [push]
 	default = simple
 [core]
