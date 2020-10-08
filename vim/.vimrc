@@ -60,6 +60,7 @@ set smartcase
 set splitbelow
 set splitright
 set statusline+='%F' " Show full file path.
+set tabline=%!Tabline()
 set tabstop=2
 set termguicolors
 set t_Co=256
@@ -76,13 +77,11 @@ function! Tabline()
     let s .= '%' . tab . 'T' " Start a tab.
     let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#') " Highlight active tab.
     let s .= ' [' . tab .'] ' " Tab index.
-    let s .= (bufname != '' ? fnamemodify(bufname, ':~:.') . ' ' : '[No Name] ') " Tab name.
+    let s .= (bufname != '' ? fnamemodify(bufname, ':t') . ' ' : '[No Name] ') " Tab name.
     let s .= (bufmodified ? '* ' : '') " Modified buffer.
   endfor
   return s
 endfunction
-
-set tabline=%!Tabline()
 
 " ========
 " coc.nvim
