@@ -32,11 +32,9 @@ endif
 
 colorscheme onedark
 
-" Quick escape.
 inoremap jk <Esc>
-
-" No background on vertical split bars; thinner splits.
-hi VertSplit NONE
+nnoremap <C-t>l gt
+nnoremap <C-t>h gT
 
 let g:netrw_liststyle = 3
 
