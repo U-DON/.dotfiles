@@ -30,11 +30,15 @@ if ! has('gui_running')
   augroup END
 endif
 
+colorscheme onedark
+
 " Quick escape.
 inoremap jk <Esc>
 
 " No background on vertical split bars; thinner splits.
 hi VertSplit NONE
+
+let g:netrw_liststyle = 3
 
 set background=dark
 set backupcopy=yes
@@ -59,11 +63,7 @@ set tabstop=2
 set termguicolors
 set t_Co=256
 
-let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-let g:airline_theme = 'onedark'
-
-colorscheme onedark
-
+" ========
 " coc.nvim
 " ========
 
@@ -78,3 +78,10 @@ set cmdheight=2
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
+
+" ===========
+" vim-airline
+" ===========
+
+let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+let g:airline_theme = 'onedark'
