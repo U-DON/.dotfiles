@@ -30,6 +30,9 @@ if ! has('gui_running')
   augroup END
 endif
 
+" Hide line numbers in terminal.
+autocmd TermOpen * setlocal nonu
+
 colorscheme onedark
 
 inoremap jk <Esc>
