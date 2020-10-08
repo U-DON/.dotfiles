@@ -107,7 +107,9 @@ source $ZSH/oh-my-zsh.sh
 alias dc='docker-compose'
 alias rg='rg -S'
 
-export EDITOR='nvim'
+export BAT_THEME='ansi-dark'
+export VISUAL='nvim'
+export EDITOR="$VISUAL"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
