@@ -41,6 +41,8 @@ set backupcopy=yes
 set clipboard=unnamed " Sync register with clipboard.
 set expandtab
 set fillchars=vert:\│ " Connected vertical split characters.
+set foldlevelstart=99 " Start with all folds open.
+set foldmethod=syntax
 set guicursor= " Use default terminal cursor.
 set hlsearch
 set ignorecase
