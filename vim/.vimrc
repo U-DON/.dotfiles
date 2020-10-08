@@ -61,6 +61,26 @@ set tabstop=2
 set termguicolors
 set t_Co=256
 
+function! Tabline()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tab = i + 1
+    let winnr = tabpagewinnr(tab)
+    let buflist = tabpagebuflist(tab)
+    let bufnr = buflist[winnr - 1]
+    let bufname = bufname(bufnr)
+    let bufmodified = getbufvar(bufnr, "&mod")
+    let s .= '%' . tab . 'T' " Start a tab.
+    let s .= (tab == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#') " Highlight active tab.
+    let s .= ' [' . tab .'] ' " Tab index.
+    let s .= (bufname != '' ? fnamemodify(bufname, ':~:.') . ' ' : '[No Name] ') " Tab name.
+    let s .= (bufmodified ? '* ' : '') " Modified buffer.
+  endfor
+  return s
+endfunction
+
+set tabline=%!Tabline()
+
 " ========
 " coc.nvim
 " ========
